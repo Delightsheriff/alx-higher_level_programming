@@ -1,2 +1,3 @@
 #!/usr/bin/python3
-print("abcdefghijklmnopqrstuvwxyz")
+for ascii_code in range(97, 123):
+    print(chr(ascii_code), end='')
