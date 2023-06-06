@@ -1,5 +1,4 @@
 #!/usr/bin/python3
 str = "Python is an interpreted, interactive, object-oriented programming\
  language that combines remarkable power with very clear syntax"
-len(str)
-print(str[39:67])
+print(str[39:75])
