@@ -5,7 +5,5 @@ def delete_at(my_list=[], idx=0):
         if idx in range(temp):
             del my_list[idx]
             return my_list
-        elif idx < 0:
-            return my_list
-        elif idx not in range(temp):
+        elif idx < 0 or idx >= temp:
             return my_list
