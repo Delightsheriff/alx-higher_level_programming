@@ -6,7 +6,7 @@ def print_matrix_integer(matrix=[[]]):
             x = len(temp)
             for temps in temp:
                 if i == x:
-                    print('{:d}'.format(temps), end=' ')
+                    print('{:d}'.format(temps), end='')
                 else:
                     print('{:d}'.format(temps), end=' ')
                 i += 1
