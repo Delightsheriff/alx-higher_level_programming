@@ -8,7 +8,7 @@ void print_hexn(const char *str, int n)
 	for (; temp < n - 1; ++temp)
 		printf("%02x ", (unsigned char) str[temp]);
 
-	printf("%02x", str[i]);
+	printf("%02x", str[temp]);
 }
 
 void print_python_bytes(PyObject *p)
