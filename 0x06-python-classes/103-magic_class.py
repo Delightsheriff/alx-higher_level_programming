@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-import dis
 import math
 
 """
@@ -26,10 +25,10 @@ class MagicClass:
         """
         calculate the area
         """
-        return self.__radius ** 2 * math.pi
+        return (self.__radius ** 2 * math.pi)
 
     def circumference(self):
         """
         calculate the circumference
         """
-        return 2 * math.pi * self.__radius
+        return (2 * math.pi * self.__radius)
