@@ -1,15 +1,16 @@
 #!/usr/bin/python3
-import math
 
 """
 MagicClass with size validation and position validation
 """
+import math
 
 
 class MagicClass:
     """
     A magic class
     """
+
     def __init__(self, radius=0):
         """
         initialize class with radius
