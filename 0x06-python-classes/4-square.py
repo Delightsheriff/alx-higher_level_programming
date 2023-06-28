@@ -18,26 +18,26 @@ class Square:
 
         Attributes:
             size: The size of the square
+        Raises:
+            ValueError: If the size is negative.
+            TypeError: If the size is not an integer.
 
         """
-        self.size = size
+        if not isinstance(size, int):
+            raise TypeError("size must be an integer")
+        if size < 0:
+            raise ValueError("size must be >= 0")
+        self.__size = size
 
     @property
     def size(self):
-        """Returns the current square size."""
         return self.__size
 
     @size.setter
     def size(self, value):
-        """
-        Sets the square size.
-
-        Attributes:
-            self: The square object.
-            value: The new square size.
-        """
+        """Sets the square size."""
         if not isinstance(value, int):
-            print("size must be an integer")
+            raise TypeError("size must be an integer")
         elif value < 0:
             raise ValueError("size must be >= 0")
         else:
