@@ -6,8 +6,9 @@ This doesnt do anything.
 
 
 class Rectangle:
-    number_of_instances = 0
     """This class represents a Reactangle."""
+    number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         """__init__
 
