@@ -10,11 +10,24 @@ def pascal_triangle(n):
 
     if n <= 0:
         return []
+
+    limit = n - 1
     triangle = [[1]]
-    for i in range(1, n + 1):
-        new_row = [1]
-        for j in range(1, i):
-            new_row.append(triangle[i - 1][j - 1] + triangle[i - 1][j])
-        new_row.append(1)
-        triangle.append(new_row)
+
+    for i in range(limit):
+        row = []
+        row.append(1)
+
+        if len(triangle[i]) > 1:
+            prev_row_len = len(triangle[i]) - 1
+            nxt = 1
+
+            for j in range(prev_row_len):
+                suma = triangle[i][j] + triangle[i][nxt]
+                row.append(suma)
+                nxt += 1
+
+        row.append(1)
+        triangle.append(row)
+
     return triangle
