@@ -1,7 +1,10 @@
 #!/usr/bin/python3
 """A script that lists all states from the database"""
+
+
 import MySQLdb
-import sys
+from sys import argv
+
 
 if __name__ == '__main__':
     db = MySQLdb.connect(
