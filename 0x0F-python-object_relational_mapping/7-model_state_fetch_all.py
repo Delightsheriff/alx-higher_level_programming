@@ -9,13 +9,14 @@ from sqlalchemy.orm import sessionmaker
 
 
 if __name__ == '__main__':
-    temp = "mysql+mysqldb://{}:{}@localhost:3306/{}".format(
-        argv[1], argv[2], argv[3])
-
-    engine = create_engine(temp)
+    x = 'mysql+mysqldb://{}:{}@localhost:3306/{}'
+    y = pool_pre_ping = True
+    engine = create_engine(x.format(argv[1], argv[2], argv[3]), y)
 
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    for state in session.query(State).order_by(State.id):
-        print("{:d} {}".format(state.id, state.name))
+    states = session.query(State).order_by(State.id).all()
+
+    for state in states:
+        print("{}: {}".format(state.id, state.name))
