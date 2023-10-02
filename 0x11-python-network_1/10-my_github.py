@@ -11,7 +11,4 @@ import requests
 if __name__ == "__main__":
     url = 'https://api.github.com/user'
     temp = requests.get(url, auth=(argv[1], argv[2])).json()
-    try:
-        print(temp['id'])
-    except:
-        print(None)
+    print(temp.get("id"))
