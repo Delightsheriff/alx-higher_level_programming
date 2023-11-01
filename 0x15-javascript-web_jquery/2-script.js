@@ -1,6 +1,6 @@
 const $headerElem = $('header');
-const $divRed_Header = $('div#red_header');
+const $divRedHeader = $('div#red_header');
 
-$divRed_Header.on('click', function() {
-    $headerElem.css("color", "#FF0000");
+$divRedHeader.on('click', function () {
+  $headerElem.css('color', '#FF0000');
 });
